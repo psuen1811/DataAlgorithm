@@ -11,7 +11,6 @@ import java.util.stream.Stream;
 public class YearsOfMaxPopulation {
 
     // Get a max value from map entries
-    @SuppressWarnings("OptionalGetWithoutIsPresent")
     static <K, V extends Comparable<V>> V maxUsingStreamAndMethodReference(ArrayListMultimap<K, V> map) {
         Optional<Map.Entry<K, V>> maxEntry = map.entries()
                 .stream()
@@ -32,7 +31,8 @@ public class YearsOfMaxPopulation {
     // Compare both lists
     // incrementing or decrementing by 1 for birth and death, respectively,
     // then store the answer in Multi-Map
-    static <K, V> ArrayListMultimap<K, V> solve(ArrayListMultimap<K, V> peopleBirthDeath,
+    @SuppressWarnings("unchecked")
+	static <K, V> ArrayListMultimap<K, V> solve(ArrayListMultimap<K, V> peopleBirthDeath,
                                                 ArrayList<Integer> birthYearList, ArrayList<Integer> deathYearList) {
         int birthCount = 0;
         int nextDeathYear = 0;

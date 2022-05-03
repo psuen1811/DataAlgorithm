@@ -29,5 +29,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
         String input4 = "";
         LongestSubstringWithoutRepeatingCharacters obj = new LongestSubstringWithoutRepeatingCharacters();
         System.out.println(obj.lengthOfLongestSubstring(input));
+        System.out.println(obj.lengthOfLongestSubstring(input2));
+        System.out.println(obj.lengthOfLongestSubstring(input3));
+        System.out.println(obj.lengthOfLongestSubstring(input4));
+
     }
 }

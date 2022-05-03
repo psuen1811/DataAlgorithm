@@ -3,6 +3,8 @@ package com.pak.practice.algorithm.linkedlist;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pak.practice.algorithm.linkedlist.GetNodeValue.Node;
+
 public class CopyLinkedListWithArbitraryPointer {
     class Node {
         int val;
