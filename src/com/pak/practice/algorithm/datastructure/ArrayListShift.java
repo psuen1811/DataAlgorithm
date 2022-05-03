@@ -1,7 +1,8 @@
-package com.pak.practice.algorithm.datastructure;
+            package com.pak.practice.algorithm.datastructure;
 
 import java.util.*;
 
+@SuppressWarnings("serial")
 public class ArrayListShift<E> extends ArrayList<E> {
     public ArrayListShift() {
     }
