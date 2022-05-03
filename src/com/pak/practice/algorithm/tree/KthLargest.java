@@ -14,7 +14,6 @@ public class KthLargest {
         if( pq.size() > k ) pq.poll();
     }
 
-    @SuppressWarnings("ConstantConditions")
     public int add(int val) {
         pq.offer(val);
         if(pq.size() > k) pq.poll();
