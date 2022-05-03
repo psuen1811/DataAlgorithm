@@ -1,7 +1,5 @@
 package com.pak.practice.algorithm.tree;
 
-import com.google.common.collect.Lists;
-
 import java.util.*;
 
 public class KthClosest {
