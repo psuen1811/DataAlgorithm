@@ -18,7 +18,8 @@ public class GetNodeValue {
         head = newNode;
     }
 
-    int getNodeValue(int positionTail) {
+    @SuppressWarnings("null")
+	int getNodeValue(int positionTail) {
         Node temp = head, front = head;
         int size = 0;
         while (temp != null) {
