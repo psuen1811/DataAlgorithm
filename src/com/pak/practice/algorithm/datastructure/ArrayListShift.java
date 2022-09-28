@@ -2,14 +2,7 @@
 
 import java.util.*;
 
-@SuppressWarnings("serial")
 public class ArrayListShift<E> extends ArrayList<E> {
-    public ArrayListShift() {
-    }
-
-    public ArrayListShift(int size) {
-        super(size);
-    }
 
     public ArrayListShift(final List<E> list) {
         super(list);
@@ -35,6 +28,15 @@ public class ArrayListShift<E> extends ArrayList<E> {
         int i = 0;
         while (i < size) {
             int k = (i + shiftSize) % size;
+
+            /* Left shift 3 times
+            o = 1, 2, 3, 4, 5
+
+            i = 0, 1, 2, 3, 4
+            k = 3, 4, 0, 1, 2
+            t = 4, 5, 1, 2, 3
+
+             */
             /*
             k = 0, 1, 2, 3, 4
             i = 4, 0, 1, 2, 3
@@ -72,6 +74,21 @@ public class ArrayListShift<E> extends ArrayList<E> {
         while (i < size) {
             int k = (i + shiftSize) % size;
 
+            /* Right shift 3 times
+            o = 1, 2, 3, 4, 5
+
+            i = 0, 1, 2, 3, 4
+            k = 3, 4, 0, 1, 2
+
+            (3,1)
+            (4,2)
+            (0,3) -> this will be the 1st key sorted by HashMap
+            (1,4)
+            (2,5)
+
+            Answer: 3, 4, 5, 1 2
+
+             */
             temp.put(k, this.get(i));
             i++;
         }
